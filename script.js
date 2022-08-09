@@ -18,7 +18,7 @@ function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-};
+}
 
 //gets random color
 function getRandomColor() {
@@ -28,7 +28,7 @@ function getRandomColor() {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
-};
+}
 
 //resets the canvas using the 'reset' button
 const reset = document.querySelector("#reset");
@@ -37,5 +37,17 @@ reset.addEventListener("click", function () {
   let cell = grid.children;
   for (let i = 0; i < val * val; i++) {
     cell[i].style.backgroundColor = "white";
+  }
+});
+
+// chooses random color to sketch
+const rgb = document.querySelector("#rgb");
+rgb.addEventListener("click", function () {
+  let val = document.getElementById("slider").value;
+  let cell = grid.children;
+  for (let i = 0; i < val * val; i++) {
+    cell[i].addEventListener("mouseover", function (e) {
+      e.target.style.backgroundColor = getRandomColor();
+    });
   }
 });
