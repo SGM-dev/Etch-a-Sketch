@@ -1,15 +1,23 @@
 * {
-    font-family: "Courier New", Courier, monospace;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: -30px;
-  }
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -30px;
+}
 
-  h1 {
-    font-size: 50px;
-    text-shadow: 5px 5px rgb(255, 255, 255);
-  }
+h1 {
+  font-size: 50px;
+  text-shadow: 5px 5px rgb(255, 255, 255);
+}
+
+.btns {
+  cursor: pointer;
+  flex-direction: row;
+  width: 600px;
+  height: 50px;
+  justify-content: space-between;
+}
