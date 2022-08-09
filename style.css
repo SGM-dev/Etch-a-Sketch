@@ -21,3 +21,12 @@ h1 {
   height: 50px;
   justify-content: space-between;
 }
+
+button {
+    width: 80px;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 5px 5px;
+    outline: none;
+  }
+  
