@@ -84,3 +84,21 @@ button:active {
   color: black;
   text-shadow: 2px 2px white;
 }
+
+.grid{
+    margin-top: 50px;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    border: 5px solid white;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
+    background-color: gray;
+    box-shadow: 10px 10px;
+}
+
+.cell{
+    background-color: white;
+    border: 1px solid black;
+}
