@@ -60,3 +60,5 @@ black.addEventListener("click", function () {
     });
   }
 });
+
+createGrid();
