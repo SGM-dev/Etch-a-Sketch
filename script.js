@@ -40,6 +40,7 @@ reset.addEventListener("click", function () {
 // chooses random color to sketch
 const rgb = document.querySelector("#rgb");
 rgb.addEventListener("click", function () {
+    black.removeEventListener
   let val = document.getElementById("slider").value;
   let cell = grid.children;
   for (let i = 0; i < val * val; i++) {
@@ -58,6 +59,27 @@ black.addEventListener("click", function () {
     cell[i].addEventListener("mouseover", function (e) {
       e.target.style.backgroundColor = "black";
     });
+  }
+});
+
+// sets grid cells as per user input
+const slider = document.querySelector("#slider");
+const screenVal = document.querySelector(".value");
+slider.addEventListener("input", function () {
+  let val = document.getElementById("slider").value;
+  screenVal.textContent = val;
+  removeAllChildNodes(grid);
+  grid.setAttribute(
+    "style",
+    `grid-template-columns: repeat(${val}, 2fr); grid-template-rows: repeat(${val}, 2fr);`
+  );
+  for (let i = 0; i < val * val; i++) {
+    const div = document.createElement("div");
+    div.classList.add("cell");
+    div.addEventListener("mouseover", function (event) {
+      event.target.style.backgroundColor = "black";
+    });
+    grid.appendChild(div);
   }
 });
 
