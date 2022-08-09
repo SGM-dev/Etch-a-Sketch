@@ -77,3 +77,10 @@ button:active {
   background: white;
   border-radius: 40px;
 }
+
+.value {
+  font-size: 20px;
+  padding-left: 10px;
+  color: black;
+  text-shadow: 2px 2px white;
+}
