@@ -37,3 +37,12 @@ button:hover {
 button:active {
   transform: scale(1.2);
 }
+
+#rgb {
+  background: linear-gradient(
+    to right,
+    rgb(239, 190, 190),
+    rgb(170, 242, 170),
+    rgb(169, 169, 250)
+  );
+}
