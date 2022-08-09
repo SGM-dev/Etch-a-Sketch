@@ -6,9 +6,6 @@ createGrid = () => {
     div.classList.add("cell");
     div.addEventListener("mouseover", function (event) {
       event.target.style.backgroundColor = "black";
-      let currentOpacity = +this.style.opacity;
-      if (currentOpacity < 1) currentOpacity += 0.1;
-      this.style.opacity = currentOpacity;
     });
     grid.appendChild(div);
   }
@@ -48,6 +45,18 @@ rgb.addEventListener("click", function () {
   for (let i = 0; i < val * val; i++) {
     cell[i].addEventListener("mouseover", function (e) {
       e.target.style.backgroundColor = getRandomColor();
+    });
+  }
+});
+
+// sets black as color
+const black = document.querySelector("#black");
+black.addEventListener("click", function () {
+  let val = document.getElementById("slider").value;
+  let cell = grid.children;
+  for (let i = 0; i < val * val; i++) {
+    cell[i].addEventListener("mouseover", function (e) {
+      e.target.style.backgroundColor = "black";
     });
   }
 });
