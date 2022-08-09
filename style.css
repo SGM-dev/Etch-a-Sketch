@@ -55,3 +55,25 @@ button:active {
   margin-left: 150px;
   margin-top: -42px;
 }
+
+#slider {
+  -webkit-appearance: none;
+  background: black;
+  outline: none;
+  border-radius: 40px;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 40px;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 40px;
+}
