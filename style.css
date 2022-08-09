@@ -23,10 +23,17 @@ h1 {
 }
 
 button {
-    width: 80px;
-    font-size: 20px;
-    background-color: white;
-    box-shadow: 5px 5px;
-    outline: none;
-  }
-  
+  width: 80px;
+  font-size: 20px;
+  background-color: white;
+  box-shadow: 5px 5px;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1.2);
+}
